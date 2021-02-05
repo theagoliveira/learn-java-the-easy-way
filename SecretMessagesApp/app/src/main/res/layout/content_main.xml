@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Thiago's Secret Messages App"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtIn"
+        android:layout_width="0dp"
+        android:layout_height="132dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:lines="4"
+        android:text="Secret messages\nare so cool,\naren't they?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle" />
+
+    <SeekBar
+        android:id="@+id/slider"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:max="50"
+        android:progress="40"
+        app:layout_constraintEnd_toStartOf="@+id/lblKey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIn" />
+
+    <TextView
+        android:id="@+id/lblKey"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Key:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtKey"
+        app:layout_constraintStart_toEndOf="@+id/slider"
+        app:layout_constraintTop_toBottomOf="@+id/txtIn" />
+
+    <EditText
+        android:id="@+id/txtKey"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:inputType="numberSigned"
+        android:text="15"
+        app:layout_constraintEnd_toStartOf="@+id/btnEncode"
+        app:layout_constraintStart_toEndOf="@+id/lblKey"
+        app:layout_constraintTop_toBottomOf="@+id/txtIn" />
+
+    <Button
+        android:id="@+id/btnEncode"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Encode/Decode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtKey"
+        app:layout_constraintTop_toBottomOf="@+id/txtIn" />
+
+    <EditText
+        android:id="@+id/txtOut"
+        android:layout_width="0dp"
+        android:layout_height="132dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:lines="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider" />
+
+    <Button
+        android:id="@+id/btnMoveUp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:text="Move Up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOut" />
+</androidx.constraintlayout.widget.ConstraintLayout>
